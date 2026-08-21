@@ -132,8 +132,9 @@
                     <a class="brand-link" href="{{ url_for(__name__ ~ ':index') }}">
                         {% block brand %}
                             {% if logo_url(request) %}
-                                <img src="{{ logo_url(request) }}" class="brand-image opacity-75 shadow" />
-                                <span class="brand-text fw-light">{{ app_title }}</span>
+                                <img src="{{ logo_url(request) }}"
+                                     class="brand-image opacity-75 shadow"
+                                     alt="{{ app_title }}" />
                             {% else %}
                                 <span class="brand-text fw-light">{{ app_title }}</span>
                             {% endif %}
